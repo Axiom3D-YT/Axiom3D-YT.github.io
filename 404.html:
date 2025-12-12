@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Check if the missing file is the spacemouse uf2 file
+        if (window.location.href.indexOf("spacemouse-final-cable.ino.uf2") > -1) {
+            // Redirect to the new HTML page
+            window.location.replace("https://axiom3d-yt.github.io/spacemouse.html");
+        }
+    </script>
+</head>
+<body>
+    <p>Page not found. <a href="https://axiom3d-yt.github.io/spacemouse.html">Return to Spacemouse Page</a></p>
+</body>
+</html>
