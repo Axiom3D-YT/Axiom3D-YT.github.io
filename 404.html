@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <title>Not found — Redirecting...</title>
 
-  <!-- Meta refresh as a fallback for very old browsers / no-JS (wait 1s to show message briefly) -->
-  <meta http-equiv="refresh" content="1;url=https://axiom3d-yt.github.io/spacemouse.html">
+  <!-- Meta refresh as a fallback for very old browsers / no-JS (wait 2s to show message briefly) -->
+  <meta http-equiv="refresh" content="2;url=https://axiom3d-yt.github.io/spacemouse.html">
 
   <style>
     body {
@@ -39,17 +39,20 @@
   </style>
 
   <script>
-    // Redirect immediately for any missing path to the desired fallback.
+    // Redirect after 2 seconds to the desired fallback.
     // Change fallbackUrl if you want a different page.
     (function () {
       var fallbackUrl = "https://axiom3d-yt.github.io/spacemouse.html";
-      try {
-        // Use replace() so the 404 page isn't added to history
-        window.location.replace(fallbackUrl);
-      } catch (e) {
-        // If replace fails for some reason, set location.href
-        window.location.href = fallbackUrl;
-      }
+      // Wait 2000ms (2s) before redirecting so the message/button are visible briefly
+      setTimeout(function () {
+        try {
+          // Use replace() so the 404 page isn't added to history
+          window.location.replace(fallbackUrl);
+        } catch (e) {
+          // If replace fails for some reason, set location.href
+          window.location.href = fallbackUrl;
+        }
+      }, 2000);
     })();
   </script>
 </head>
